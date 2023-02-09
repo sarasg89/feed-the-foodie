@@ -29,7 +29,8 @@ The application helps people find recipes they hadn't thought of before or resta
 ![Shopping list page](./assets/images/screenshots/shopping-list.png)
 
 ## Deployment
-test
+
+https://sarasg89.github.io/feed-the-foodie/
 
 ## Credits
 
