@@ -35,6 +35,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href = "https://code.jquery.com/ui/1.13.2/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
     <title>Restaurants</title>
 </head>
 
@@ -86,6 +88,8 @@
                     appetit!
                 </p>
             </div>
+            <div id="needAllFieldsDialog" hidden="hidden" title="Please fill in all fields."><p>All search fields must be populated.</p></div>
+            <div id="numericDistanceDialog" hidden="hidden" title="Distance must be a number."><p>The distance must be a number.</p></div>
         </section>
 
         <!-- Selection Section-->
@@ -315,6 +319,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="./assets/js/restaurant.js"></script>
 </body>
 

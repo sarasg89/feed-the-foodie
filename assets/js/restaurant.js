@@ -34,13 +34,13 @@ $(document).ready(function () {
 
         // Check if the fields are filled in
         if(distance.length == 0 || city.length == 0 || cuisine.length == 0 ){
-            alert("All fields must be populated.");
+            $("#needAllFieldsDialog").dialog({dialogClass:"warning-dialog", width:300, modal:true});
             return;
         }
 
         // Use the "is not a number" function to see if the user put text where a number should go
         if(isNaN(distance)){
-            alert("Distance must be a number.");
+            $("#numericDistanceDialog").dialog({dialogClass:"warning-dialog", width:300, modal:true});
             return;
         }
 

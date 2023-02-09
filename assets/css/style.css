@@ -48,3 +48,11 @@ h1 {
     transition: all 0.25s;
     position: relative;
 }
+
+/* Dialog colors */
+.warning-dialog .ui-dialog-titlebar {
+    background: rgb(205 216 195);
+    border: 1px solid rgb(205 216 195);
+    color: #FFFFFF;
+    font-weight: bold;
+ }
