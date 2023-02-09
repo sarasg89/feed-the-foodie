@@ -27,12 +27,7 @@ $(document).ready(function () {
 
     searchBtnEl.on("click", function (event) {
         event.preventDefault();
-        restaurantEl.removeAttr("hidden");
-        newSearchEl.removeAttr("hidden");
-        searchFormEl.attr("hidden", "hidden");
 
-        APIkey1 = "2D3652D5BC3F451F8D340C99078D1247";
-        var cors = 'https://cors-anywhere.herokuapp.com/' // this needs to go before the TripAdvisor url
         var city = $("#city").val();
         var cuisine = $("#cuisine").val();
         var distance = $("#distance").val();
@@ -49,9 +44,17 @@ $(document).ready(function () {
             return;
         }
 
+        restaurantEl.removeAttr("hidden");
+        newSearchEl.removeAttr("hidden");
+        searchFormEl.attr("hidden", "hidden");
+
+        APIkey1 = "2D3652D5BC3F451F8D340C99078D1247";
+        var cors = 'https://cors-anywhere.herokuapp.com/' // this needs to go before the TripAdvisor url
+        
+
         // Everything is OK, time to call the API!
 
-        var advisorUrl = 'https://api.content.tripadvisor.com/api/v1/location/search?key=2D3652D5BC3F451F8D340C99078D1247&searchQuery=' + city + '%20'+cuisine+'&category=restaurants&language=en&radiusUnit=km&radius='+distance
+        var advisorUrl = cors+'https://api.content.tripadvisor.com/api/v1/location/search?key=2D3652D5BC3F451F8D340C99078D1247&searchQuery=' + city + '%20'+cuisine+'&category=restaurants&language=en&radiusUnit=km&radius='+distance
 
 
         fetch(advisorUrl)
@@ -74,7 +77,7 @@ $(document).ready(function () {
                     $("#rating-img-"+i).attr("id", "rating-img-"+data[i].location_id)
 
                     // I need to do a second fetch to get the restaurant details to fill in the remaining data
-                    var detailsUrl = 'https://api.content.tripadvisor.com/api/v1/location/'+data[i].location_id+'/details?key=2D3652D5BC3F451F8D340C99078D1247&currency=CAD'
+                    var detailsUrl = cors+'https://api.content.tripadvisor.com/api/v1/location/'+data[i].location_id+'/details?key=2D3652D5BC3F451F8D340C99078D1247&currency=CAD'
                     fetch(detailsUrl)
                         .then(function (response) {
                             return response.json();
