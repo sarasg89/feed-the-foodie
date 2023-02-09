@@ -53,7 +53,7 @@ $(document).ready(function () {
 
         // Everything is OK, time to call the API!
 
-        var advisorUrl = 'https://us-central1-pors-croxy.cloudfunctions.net/cors-anywhere?u='+encodeURIComponent('https://api.content.tripadvisor.com/api/v1/location/search?key=2D3652D5BC3F451F8D340C99078D1247&searchQuery=' + city + '%20'+cuisine+'&category=restaurants&language=en&radiusUnit=km&radius='+distance)
+        var advisorUrl = 'https://us-central1-pors-croxy.cloudfunctions.net/cors-anywhere?u='+encodeURIComponent('https://api.content.tripadvisor.com/api/v1/location/search?key=2D3652D5BC3F451F8D340C99078D1247&searchQuery=' + city + '%20'+cuisine+'%20restaurant&category=restaurants&language=en&radiusUnit=km&radius='+distance)
 
 
         fetch(advisorUrl)
