@@ -131,7 +131,7 @@ $(document).ready(function () {
 
         // For as many IDs as are saved to local storage fetch the API based on the specific ID saved and display it to the screen
         for (var i = 0; i < restaurantId.length; i++) {
-            urlWithRestId = "https://cors-anywhere.herokuapp.com/https://api.content.tripadvisor.com/api/v1/location/" + restaurantId[i] + "/details?key=2D3652D5BC3F451F8D340C99078D1247&language=en&currency=CAD'"
+            urlWithRestId = "https://us-central1-pors-croxy.cloudfunctions.net/cors-anywhere?u="+encodeURIComponent("https://api.content.tripadvisor.com/api/v1/location/" + restaurantId[i] + "/details?key=2D3652D5BC3F451F8D340C99078D1247&language=en&currency=CAD")
 
 
             fetch(urlWithRestId)
@@ -139,7 +139,7 @@ $(document).ready(function () {
                     return response.json();
                 })
                 .then(function (data) {
-                    urlWithRestIdPhoto = "https://cors-anywhere.herokuapp.com/https://api.content.tripadvisor.com/api/v1/location/" + data.location_id + "/photos?key=2D3652D5BC3F451F8D340C99078D1247&language=en"
+                    urlWithRestIdPhoto = "https://us-central1-pors-croxy.cloudfunctions.net/cors-anywhere?u="+encodeURIComponent("https://api.content.tripadvisor.com/api/v1/location/" + data.location_id + "/photos?key=2D3652D5BC3F451F8D340C99078D1247&language=en")
                     fetch(urlWithRestIdPhoto)
                         .then(function (response) {
                             return response.json()

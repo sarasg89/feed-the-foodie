@@ -49,12 +49,11 @@ $(document).ready(function () {
         searchFormEl.attr("hidden", "hidden");
 
         APIkey1 = "2D3652D5BC3F451F8D340C99078D1247";
-        var cors = 'https://cors-anywhere.herokuapp.com/' // this needs to go before the TripAdvisor url
         
 
         // Everything is OK, time to call the API!
 
-        var advisorUrl = cors+'https://api.content.tripadvisor.com/api/v1/location/search?key=2D3652D5BC3F451F8D340C99078D1247&searchQuery=' + city + '%20'+cuisine+'&category=restaurants&language=en&radiusUnit=km&radius='+distance
+        var advisorUrl = 'https://us-central1-pors-croxy.cloudfunctions.net/cors-anywhere?u='+encodeURIComponent('https://api.content.tripadvisor.com/api/v1/location/search?key=2D3652D5BC3F451F8D340C99078D1247&searchQuery=' + city + '%20'+cuisine+'&category=restaurants&language=en&radiusUnit=km&radius='+distance)
 
 
         fetch(advisorUrl)
@@ -62,7 +61,6 @@ $(document).ready(function () {
                 return response.json();
             })
             .then(function (data) {
-                console.log(data)
                 data = data.data;
                 // I have the data now, start filling in the divs. The first element in data[0] is basic details about the selected city so I skip it
                 for(i = 1; i < 4; i++){
@@ -77,13 +75,12 @@ $(document).ready(function () {
                     $("#rating-img-"+i).attr("id", "rating-img-"+data[i].location_id)
 
                     // I need to do a second fetch to get the restaurant details to fill in the remaining data
-                    var detailsUrl = cors+'https://api.content.tripadvisor.com/api/v1/location/'+data[i].location_id+'/details?key=2D3652D5BC3F451F8D340C99078D1247&currency=CAD'
+                    var detailsUrl = 'https://us-central1-pors-croxy.cloudfunctions.net/cors-anywhere?u='+encodeURIComponent('https://api.content.tripadvisor.com/api/v1/location/'+data[i].location_id+'/details?key=2D3652D5BC3F451F8D340C99078D1247&currency=CAD')
                     fetch(detailsUrl)
                         .then(function (response) {
                             return response.json();
                         })
                         .then(function (dataDetails) {
-                            console.log(dataDetails)
                             $("#web-" + dataDetails.location_id).attr("href", dataDetails.web_url);
                             $("#contact-"+ dataDetails.location_id).html(dataDetails.phone)
                             $("#rating-img-"+ dataDetails.location_id).attr("src", dataDetails.rating_image_url)
