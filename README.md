@@ -6,6 +6,10 @@ We have created a website that helps the user come up with recipe ideas but also
 
 The application helps people find recipes they hadn't thought of before or restaurants they didn't know about. 
 
+## Application usage
+
+![demo](./assets/images/Feed%20The%20Foodie.gif)
+
 ## Screenshots
 
 ### Home page
@@ -36,9 +40,13 @@ https://sarasg89.github.io/feed-the-foodie/
 
 We used [Tailwind](https://tailwindcss.com/docs/installation) to style this page and use their documentation for guidance
 
-## Project Proposal
+The original repo for this project can be found [here](https://github.com/MohammadKouchaki/Feed-the-foodie). The owner of this repo is no longer part of the project so it had to be cloned here in order to deploy the application. Please refer to the original repo for commit and branch history.
+
+## Project Proposal and Presentation
 
 [Here](https://docs.google.com/document/d/1AQT4OEH4UhSiaxFsiAVgNsJgzWs-vwxX/edit?usp=share_link&ouid=102341349698427392931&rtpof=true&sd=true) is a link to view our initial project proposal 
+
+Our presentation is accessible on [this](https://www.canva.com/design/DAFaA6s-QW8/e3X8dgEmiYC-qLPmN6SdpQ/edit) link
 
 ## License
 
