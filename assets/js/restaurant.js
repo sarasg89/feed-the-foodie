@@ -65,8 +65,8 @@ $(document).ready(function () {
                 // I have the data now, start filling in the divs. The first element in data[0] is basic details about the selected city so I skip it
                 for(i = 1; i < 4; i++){
                     $("#title"+i).html(data[i].name)
-                    $("#cuisine-"+i).html(cuisine)
-                    $("#address-"+i).html(data[i].address_obj.address_string)
+                    $("#cuisine-"+i).html(" " + cuisine)
+                    $("#address-"+i).html(" " + data[i].address_obj.address_string)
                     $("#button-" +i).attr("data-id",data[i].location_id);
 
                     // This is very ugly but I'm out of time to do anything better....
@@ -82,7 +82,7 @@ $(document).ready(function () {
                         })
                         .then(function (dataDetails) {
                             $("#web-" + dataDetails.location_id).attr("href", dataDetails.web_url);
-                            $("#contact-"+ dataDetails.location_id).html(dataDetails.phone)
+                            $("#contact-"+ dataDetails.location_id).html(" " + dataDetails.phone)
                             $("#rating-img-"+ dataDetails.location_id).attr("src", dataDetails.rating_image_url)
                         })
 
