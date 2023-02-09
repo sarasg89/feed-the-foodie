@@ -275,6 +275,13 @@ $(document).ready(function () {
 
         }
 
+        if(newUrlIngredients === ""){
+            // The user didn't select any ingredients, show an error
+            $("#noIngredientsSelectedDialog").dialog({dialogClass:"warning-dialog", width:300, modal:true});
+
+            return;
+        }
+
         fetch(newUrlIngredients)
             .then(function (response) {
                 return response.json();
@@ -292,6 +299,13 @@ $(document).ready(function () {
     // Event listener for the submit button (cuisine)
     submitBtnCEl.on("click", function (event) {
         event.preventDefault();
+
+        if(cuisineEl.val() === null){
+            // The user didn't select any ingredients, show an error
+            $("#noCuisineSelectedDialog").dialog({dialogClass:"warning-dialog", width:300, modal:true});
+
+            return;
+        }
 
         var newUrlCuisine = spoonacularUrlCui + cuisineEl.val();
 
@@ -311,6 +325,13 @@ $(document).ready(function () {
 
     submitBtnMealEl.on("click", function (event) {
         event.preventDefault();
+
+        if(mealEl.val() === null){
+            // The user didn't select any ingredients, show an error
+            $("#noMealSelectedDialog").dialog({dialogClass:"warning-dialog", width:300, modal:true});
+
+            return;
+        }
 
         var newUrlMeal = spoonacularUrlMeal + mealEl.val();
 

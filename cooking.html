@@ -35,6 +35,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href = "https://code.jquery.com/ui/1.13.2/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <title>Recipes</title>
 </head>
 
@@ -76,6 +77,10 @@
 
     <!-- Intro Section-->
     <main class="min-h-screen">
+        <div id="noIngredientsSelectedDialog" hidden="hidden" title="Select an ingredient."><p>At least one ingredient must be selected.</p></div>
+        <div id="noCuisineSelectedDialog" hidden="hidden" title="Select a cuisine."><p>At least one cuisine must be selected.</p></div>
+        <div id="noMealSelectedDialog" hidden="hidden" title="Select a meal."><p>At least one meal must be selected.</p></div>
+
         <section>
             <div class="text-center p-4 mx-6 space-y-4 md:p-6 border-solid border-b border-gray-400 lg:mx-20">
                 <h1 class="text-4xl font-bold text-darkOrange md:text-7xl">Let's cook!</h1>
@@ -408,6 +413,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="./assets/js/cooking.js"></script>
 </body>
 
