@@ -54,7 +54,7 @@ The original repo for this project can be found [here](https://github.com/Mohamm
 
 [Here](https://docs.google.com/document/d/1AQT4OEH4UhSiaxFsiAVgNsJgzWs-vwxX/edit?usp=share_link&ouid=102341349698427392931&rtpof=true&sd=true) is a link to view our initial project proposal
 
-Our presentation is accessible on [this](https://www.canva.com/design/DAFaA6s-QW8/e3X8dgEmiYC-qLPmN6SdpQ/edit) link
+Our presentation is accessible on [this](https://www.canva.com/design/DAFaA6s-QW8/e3X8dgEmiYC-qLPmN6SdpQ/view?utm_content=DAFaA6s-QW8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) link
 
 ## License
 
