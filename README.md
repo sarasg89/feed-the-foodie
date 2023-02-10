@@ -10,6 +10,10 @@ The application helps people find recipes they hadn't thought of before or resta
 
 ![demo](./assets/images/Feed%20The%20Foodie.gif)
 
+Due to time constraints and changes to our team dynamic, we ran out of time to fully develop the restaurants page. Because of this, the images and maps in this page are hardcoded in the HTML code, meaning no matter what restaurant is returned by the API, the photo will not change. 
+
+If you would like to see the functionality of the TripAdvisor API retrieving images, please refer to the favourites page when the restaurant ID stored in local storage is used to make a request to the API.
+
 ## Screenshots
 
 ### Home page
@@ -42,7 +46,7 @@ This application uses two APIs: [TripAdvisor](https://tripadvisor-content-api.re
 
 We used [Tailwind](https://tailwindcss.com/docs/installation) to style this page and use their documentation for guidance.
 
-In order to use the TripAdvisor API, we had to set up a CORS proxy on GCP following [this](https://github.com/taichunmin/gcf-cors-anywhere) tutorial.
+In order to use the TripAdvisor API, we had to set up a CORS proxy on GCP following [this](https://github.com/taichunmin/gcf-cors-anywhere) tutorial. To summarize, the Google Cloud Function runs our code without needing a server, because Google creates it for us, runs the code and closes the server immediately.
 
 The original repo for this project can be found [here](https://github.com/MohammadKouchaki/Feed-the-foodie). The owner of this repo is no longer part of the project so it had to be cloned here in order to deploy the application. Please refer to the original repo for commit and branch history.
 
